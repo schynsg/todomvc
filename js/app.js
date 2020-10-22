@@ -2028,7 +2028,18 @@ window.data = function () {
     },
     toggleCompleted: function toggleCompleted(todo) {
       todo.completed = !todo.completed;
+    },
+
+    get activeTodos() {
+      return this.todos.filter(function (todo) {
+        return todo.completed === false;
+      });
+    },
+
+    get activeTodosCount() {
+      return this.activeTodos.length;
     }
+
   };
 };
 

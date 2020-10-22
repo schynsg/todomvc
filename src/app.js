@@ -20,6 +20,12 @@ window.data = function () {
 		},
 		toggleCompleted(todo) {
 			todo.completed = !todo.completed;
+		},
+		get activeTodos () {
+			return this.todos.filter(todo => todo.completed === false);
+		},
+		get activeTodosCount () {
+			return this.activeTodos.length;
 		}
 	}
 };
