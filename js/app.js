@@ -2021,8 +2021,10 @@ window.data = function () {
         });
       }
 
-      ;
       this.newTodoTitle = '';
+    },
+    removeTodo: function removeTodo(todo) {
+      this.todos.splice(this.todos.indexOf(todo), 1);
     }
   };
 };
