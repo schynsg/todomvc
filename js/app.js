@@ -2025,6 +2025,9 @@ window.data = function () {
     },
     removeTodo: function removeTodo(todo) {
       this.todos.splice(this.todos.indexOf(todo), 1);
+    },
+    toggleCompleted: function toggleCompleted(todo) {
+      todo.completed = !todo.completed;
     }
   };
 };
