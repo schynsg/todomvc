@@ -2010,7 +2010,16 @@ __webpack_require__.r(__webpack_exports__);
 
 window.data = function () {
   return {
-    todos: []
+    todos: [],
+    newTodoTitle: '',
+    addTodo: function addTodo() {
+      this.todos.push({
+        id: Date.now(),
+        title: this.newTodoTitle,
+        completed: false
+      });
+      this.newTodoTitle = '';
+    }
   };
 };
 
