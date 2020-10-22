@@ -2013,11 +2013,15 @@ window.data = function () {
     todos: [],
     newTodoTitle: '',
     addTodo: function addTodo() {
-      this.todos.push({
-        id: Date.now(),
-        title: this.newTodoTitle,
-        completed: false
-      });
+      if (this.newTodoTitle.trim()) {
+        this.todos.push({
+          id: Date.now(),
+          title: this.newTodoTitle,
+          completed: false
+        });
+      }
+
+      ;
       this.newTodoTitle = '';
     }
   };
